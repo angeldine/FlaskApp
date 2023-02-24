@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title%} Order Page {% endblock %}
+
+{%block content%}
+    
+        <table>
+            <h1>Order table</h1>
+            <tr>
+                <th class="p-3">ID</th>
+                <th class="p-3">Order Id</th>
+                <th class="p-3">Customer Id</th>
+                <th class="p-3">Order Date</th>
+                <th class="p-3">Shipment Date</th>
+                <th class="p-3">Shipping Mode</th>
+            </tr>
+               {% for row in rows %}
+            <tr>
+                <td class="p-3">{{row["Id"]}}</td>
+                 <td class="p-3">{{row["Order_Id"]}}</td>
+                <td class="p-3">{{row["Customer_Id"]}}</td>
+                <td class="p-3">{{row["Order_Date"]}}</td>
+                <td class="p-3">{{row["Ship_Date"]}}</td>
+                <td class="p-3">{{row["Ship_Mode"]}}</td>
+            </tr>
+
+                {% endfor %}
+                
+{% endblock %}

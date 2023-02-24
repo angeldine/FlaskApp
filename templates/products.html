@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Product Page {% endblock %}
+
+{% block content %}
+
+    <h3>American Superstore Data</h3>
+        <table>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name </th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            {% for p in product %}
+            <tr>
+                <td>{{p["Product_Id"]}}</td>
+                <td>{{p["Product_Name"]}}</td>
+                <td>{{p["Price"]}}</td>
+                <td>{{p["Quantity"]}}</td>
+            </tr>
+
+                {% endfor %}
+{% endblock %}
