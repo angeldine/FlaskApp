@@ -2,24 +2,38 @@
 {% block title%} Customer Page {% endblock %}
 
 {% block content %}
-    <h3>American Superstore Data</h3>
-        <table>
+    <h3 class="mt-5" style="color: darkslategrey;"><center> Customer Details </center></h3>
+    <table class="table table-hover mt-4 table-bordered">
+        <thead class="thead-dark">
             <tr>
-                <th>ID</th>
-                <th>Customer ID</th>
-                <th>Customer Name</th>
-                <th>Segment</th>
-                <th>Country</th>
-            </tr>
+                <th scope="col">ID</th>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Segment</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Postal Code</th>
+                <th scope="col">Country</th>
+            </tr></thead>
+      
+        <tbody>
+            
             {% for c in customer %}
              <tr>
-               <td>{{c["Id"]}}</td>
-                <td>{{c["Customer_Id"]}}</td>
+               <th scope="row">{{c["Id"]}}</th>
+                <td><b><a href={{ url_for('customer_details', id = c['Customer_Id']) }}>{{c["Customer_Id"]}}</a></b></td>
                 <td>{{c["Customer_Name"]}}</td>
                 <td>{{c["Segment"]}}</td>
+                <td>{{c["city"]}}</td>
+                <td>{{c["state"]}}</td>
+                <td>{{c["postal"]}}</td>
                 <td>{{c["Country"]}}</td>
                  
             </tr>
 
               {% endfor %} 
+                      </thead>  
+        </tbody>
+
+    </table>
 {%endblock%}

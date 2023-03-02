@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title%} Order Page {% endblock %}
+
+{%block content%}
+    
+        <h3 class="mt-5" style="color: darkslategrey;"><center> Order Details</center></h3>
+    <table class="table table-hover mt-4 table-bordered">
+        <thead class="thead-dark">
+                <th scope="col">ID</th>
+                <th scope="col">Order Id</th>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Order Date</th>
+                <th scope="col">Shipment Date</th>
+                <th scope="col">Shipping Mode</th>
+            </tr>
+               {% for row in rows %}
+            <tr>
+                <th scope="row">{{row["Id"]}}</td>
+                 <td><b><a href={{ url_for('order_details', id = row['Order_Id']) }}>{{row["Order_Id"]}}</a></b></td>
+                <td>{{row["Customer_Id"]}}</td>
+                <td >{{row["Order_Date"]}}</td>
+                <td >{{row["Ship_Date"]}}</td>
+                <td >{{row["Ship_Mode"]}}</td>
+            </tr>
+
+                {% endfor %}
+                
+{% endblock %}

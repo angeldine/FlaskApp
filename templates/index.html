@@ -1,28 +1,18 @@
 {% extends "base.html" %}
-{% block title%} Order Page {% endblock %}
+{% block title %} Home Page {% endblock %}
 
-{%block content%}
-    
-        <table>
-            <h1>Order table</h1>
-            <tr>
-                <th class="p-3">ID</th>
-                <th class="p-3">Order Id</th>
-                <th class="p-3">Customer Id</th>
-                <th class="p-3">Order Date</th>
-                <th class="p-3">Shipment Date</th>
-                <th class="p-3">Shipping Mode</th>
-            </tr>
-               {% for row in rows %}
-            <tr>
-                <td class="p-3">{{row["Id"]}}</td>
-                 <td class="p-3">{{row["Order_Id"]}}</td>
-                <td class="p-3">{{row["Customer_Id"]}}</td>
-                <td class="p-3">{{row["Order_Date"]}}</td>
-                <td class="p-3">{{row["Ship_Date"]}}</td>
-                <td class="p-3">{{row["Ship_Mode"]}}</td>
-            </tr>
+{% block content %}
+<div class="p-3">
+<h3> Welcome to the home of household furnitures</h3>
+<p>Make your living space truly feel like home with our range. From beautiful furniture to stylish home furnishings and accessories, you’ll find everything you need to create a space you love spending your time in. No matter the aesthetic you’re going for in your home, you’ll find designs to help you achieve it, whether you’re opting for Scandi minimalism, mid century chic, contemporary or classic. There’s something here for every home.
 
-                {% endfor %}
-                
-{% endblock %}
+
+
+
+<h3> About Us </h3>
+<p>The online sector, referred to as “clicks,” has been slowly eating up market share in the past two decades.</p>
+<p>This is simple data set of US Diamondz Furniture superstore from 2014-2018.</p>
+<p> Visit the <a href="/customers">Customer</a>, <a href="/orders">Orders</a> and <a href="/products">Product </a> pages to get detailed information on the stores dataset.
+</div>
+
+{%endblock%}

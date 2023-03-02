@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title%} Order Details {% endblock %}
+
+{%block content%}
+
+    <h3 class="mt-5" style="color: darkslategrey;"><center> Order Product Details </center></h3>
+    <h4>{{order[0]["customer_name"]}} order details.</h4>
+    <table class="table table-hover mt-4 table-bordered">
+        <thead class="thead-dark"> 
+          <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Order ID</th>
+                <th scope="col">Order Date</th>
+                 <th scope="col">Product Id</th>
+                  <th scope="col" class="pl-3">Product Name</th>
+                   <th scope="col">Cost</th>
+                    <th scope="col">Quantity</th>
+            </tr>
+       
+            {% for o in order %}
+             <tr>
+               <th scope="row">{{o["id"]}}</th>
+                <td>{{o["order_id"]}}</td>
+                <td>{{o["order_date"]}}</td>
+                <td>{{o["product_id"]}}</td>
+                <td class="pl-3">{{o["product_name"]}}</td>
+                <td>{{o["cost"]}}</td>
+                <td>{{o["quantity"]}}</td>
+                 
+            </tr>
+
+              {% endfor %} 
+               </thead>
+    </table>
+{%endblock%}
