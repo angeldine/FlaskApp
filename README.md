@@ -13,6 +13,23 @@ for efficiency and readability.
 The web application in developed using Flask framework and Sqlite3 database and has been deployed on github: git@github.com:angeldine/FlaskApp.git
 and Render: https://flask-app-zae9.onrender.com. You can access the application by performing the following:
 
+# Files and Folders
+Using the Model, View and Controller design pattern (MVC), the project is grouped into these categories for easy access and maintainabiity.
+The templates folder contains the 'View'  files, which are basically the html webpages for the application. These are:
+
+       index.html    //The homepage of the app
+       orders.html   //Displays the customer's orders
+       products.html  //Display various products purchased
+       customers.html  //Displays customer details
+       customer_details.html  //order and product details made by each custer
+       order_details.html  //order details made by each customer
+       base.html
+
+       us_superstore.csv contains he records that is uploaded into the database
+       parse_csv.py is the controller file
+       superstore_data.py is the application file that contains the various routes and functions to start up the application.
+       us_superstore_data.db is the database file that has be created.
+
 
 ## Set up the Repository
 Pull this Git repository into your system so that you have everything to get started.
