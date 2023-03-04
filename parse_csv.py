@@ -24,7 +24,7 @@ print("tables created successfully")
 
 
 
-with open('data.csv', newline='') as f:
+with open('us_superstore.csv', newline='') as f:
    reader = csv.reader(f, delimiter=",")
    next(reader) # skip the header line
  
